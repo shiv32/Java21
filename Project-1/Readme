@@ -1,0 +1,79 @@
+Setting up Java on **Manjaro Linux** for running console apps is straightforward. 
+Since Manjaro is Arch-based, you’ll use `pacman`.
+
+---
+
+## 1. Install Java (JDK)
+
+Manjaro provides OpenJDK versions. 
+Install a stable one (recommended: 17 or 21):
+
+
+sudo pacman -S jdk21-openjdk
+
+---
+
+## 2. Verify Installation
+
+java -version
+javac -version
+
+You should see version output.
+
+---
+
+## 3. Set Default Java (if multiple versions)
+
+List installed JVMs:
+
+archlinux-java status
+
+Set default:
+
+sudo archlinux-java set java-17-openjdk
+
+---
+
+## 4. Set JAVA_HOME (important for development)
+
+Edit your shell config:
+
+nano ~/.bashrc
+
+Add:
+
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk
+export PATH=$JAVA_HOME/bin:$PATH
+
+Apply:
+
+source ~/.bashrc
+
+---
+
+## 5. Create and Run Console Java App
+
+### Example: `Main.java`
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("Hello from Java Console App");
+    }
+}
+
+### Compile:
+
+javac Main.java
+
+### Run:
+
+java Main
+
+---
+
+## 6. One-liner Run (quick testing)
+
+echo 'class Main{public static void main(String[] a){System.out.println("Hi");}}' > Main.java && javac Main.java && java Main
+
+---
+

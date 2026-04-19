@@ -1,0 +1,121 @@
+What is OpenJDK, java and javac?
+
+---
+
+# 1. What is Java?
+
+**Java** is a **programming language + platform**.
+
+* You write code like:
+
+  System.out.println("Hello");
+  
+* It is compiled into **bytecode** (not machine code directly)
+* Runs on any system with a JVM → *“Write once, run anywhere”*
+
+👉 Think:
+
+> Java = the language you write
+
+---
+
+# 2. What is OpenJDK?
+
+**OpenJDK** is the **free, open-source implementation of Java**.
+
+It includes everything needed to:
+
+* Write Java programs
+* Compile them
+* Run them
+
+### Contains:
+
+* JVM (runtime)
+* Compiler (`javac`)
+* Standard libraries
+
+👉 Think:
+
+> OpenJDK = full toolbox to use Java
+
+On Manjaro, when you install:
+
+sudo pacman -S jdk21-openjdk
+
+
+You are installing **OpenJDK**, not just “Java language”.
+
+---
+
+# 3. What is javac?
+
+**javac** is the **Java compiler**.
+
+### Role:
+
+* Converts `.java` → `.class`
+
+javac Main.java
+
+### Output:
+
+Main.class   (bytecode)
+
+👉 Think:
+
+> javac = translator (Java → bytecode)
+
+---
+
+# 4. How Everything Works Together
+
+Flow of execution:
+
+Your Code (Main.java)
+        ↓
+     javac
+        ↓
+Bytecode (Main.class)
+        ↓
+      java (JVM)
+        ↓
+   Output on console
+
+---
+
+# 5. What is `java` command then?
+
+* Runs the compiled program
+* Uses JVM internally
+
+java Main
+
+👉 Think:
+
+> java = runner/executor
+
+---
+
+# 6. Simple Analogy (C++ vs Java)
+
+Since you're a C++ dev:
+
+| Concept     | C++          | Java        |
+| ----------- | ------------ | ----------- |
+| Source file | `.cpp`       | `.java`     |
+| Compiler    | `g++`        | `javac`     |
+| Output      | machine code | bytecode    |
+| Run         | `./a.out`    | `java Main` |
+| Runtime     | OS           | JVM         |
+
+---
+
+# 7. Super Short Summary
+
+* **Java** → language
+* **OpenJDK** → full development kit
+* **javac** → compiler
+* **java** → runtime executor
+
+---
