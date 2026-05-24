@@ -1,0 +1,119 @@
+
+bash source error in zsh in manjaro fix
+
+👉 You are running **`source ~/.bashrc` inside Zsh**, not Bash.
+
+Manjaro (especially XFCE/KDE editions) often uses **Zsh** as the default shell, 
+while `.bashrc` is meant only for **GNU Bash**.
+
+---
+
+### Why these errors happen
+
+* `shopt`, `complete` → **Bash-only commands**
+* `.bashrc` → written for Bash syntax
+* Zsh tries to interpret it → fails badly
+
+That’s why you see:
+
+```
+command not found: shopt
+command not found: complete
+parse error near `&'
+```
+
+---
+
+### The real issue (important)
+
+You mixed configs:
+
+* `.bashrc` → for Bash ❌
+* Zsh shell → reads `.zshrc` ✅
+
+---
+
+### How to confirm your shell
+
+Run:
+
+```bash
+echo $SHELL
+```
+
+If you see:
+
+```
+/bin/zsh
+```
+
+→ you're using Zsh (which is the problem here)
+
+---
+
+### Fix options (choose one)
+
+#### ✅ Option 1 — Use Zsh properly (recommended)
+
+Stop sourcing `.bashrc`.
+
+Instead:
+
+```bash
+nano ~/.zshrc
+```
+
+Add your configs there.
+
+If you need bash-like completion:
+
+```bash
+autoload -Uz compinit
+compinit
+```
+
+---
+
+#### ✅ Option 2 — Switch back to Bash
+
+If you prefer Bash (good for C++/CLI simplicity):
+
+```bash
+chsh -s /bin/bash
+```
+
+Then log out and log back in.
+
+Now `.bashrc` will work correctly.
+
+---
+
+#### ⚠️ Option 3 — Temporary fix
+
+If you just want to test `.bashrc`:
+
+```bash
+bash
+source ~/.bashrc
+```
+
+This runs Bash inside your current shell.
+
+---
+
+### About that weird prompt output
+
+This:
+
+```
+\[\033[01;32m\][\u@\h ...
+```
+
+Means:
+
+* Your PS1 prompt (Bash style) is being printed literally
+* Zsh doesn’t understand Bash escape sequences like `\[` `\]`
+
+---
+
+
