@@ -34,7 +34,7 @@ sudo archlinux-java set java-17-openjdk
 
 ---
 
-## 4. Set JAVA_HOME (important for development)
+## 4. Set JAVA_HOME (important for development) for bash error see Readme2
 
 Edit your shell config:
 
