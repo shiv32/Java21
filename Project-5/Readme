@@ -1,0 +1,43 @@
+In Java, something like @SomeText is called an annotation.
+
+What does an annotation do?
+    Annotations dont directly change how code runs. Instead, they:
+        Give extra information to the compiler
+        Help tools/frameworks (like Spring, Hibernate)
+        Enable code generation / validation
+
+Common Built-in Annotations
+    @Override
+    @Deprecated
+    @SuppressWarnings
+-----------------------------------------------------------------------------------
+Real Power: Framework Annotations
+    In modern Java (especially backend), annotations drive everything.
+
+    Example with Spring Boot:
+
+        @RestController
+        public class UserController {
+
+            @GetMapping("/users")
+            public String getUsers() {
+                return "Users list";
+            }
+        }
+
+    Here:
+        @RestController → tells Spring this is a web controller
+        @GetMapping     → maps HTTP GET request
+-------------------------------------------------------------------------
+you cant just “print” an annotation like a normal object. 
+You have to read it using reflection at runtime.
+
+Where this is actually used (real-world)
+    Frameworks like Spring do exactly this internally:
+
+            @RestController
+
+    Spring:
+        reads annotation via reflection
+        then configures behavior
+----------------------------------------------------------------------------
