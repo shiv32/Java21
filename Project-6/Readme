@@ -1,0 +1,24 @@
+standard (built-in) Java annotation @Override example
+
+Here’s a clean list of the most common built-in Java annotations:
+
+## Compile-time (SOURCE)
+
+* `@Override`
+* `@SuppressWarnings`
+
+## Runtime (RUNTIME)
+
+* `@Deprecated`
+* `@FunctionalInterface`
+* `@SafeVarargs`
+* `@Retention`
+* `@Target`
+* `@Documented`
+* `@Inherited`
+
+## Class-level (CLASS)
+
+* `@Generated`
+
+
