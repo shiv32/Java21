@@ -18,7 +18,5 @@ push an existing repository from the command line
 
 
 References
-
     [openjdk](https://openjdk.org/)
-
     [OpenJDK wiki](https://en.wikipedia.org/wiki/OpenJDK)
