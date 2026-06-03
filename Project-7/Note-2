@@ -1,0 +1,35 @@
+Is java realy use in algo firm?
+
+Yes, Java is genuinely used in many algorithmic trading firms, especially for backend trading infrastructure.
+
+Examples include:
+
+* JPMorgan Chase
+* Goldman Sachs
+* Morgan Stanley
+* Citadel
+* Two Sigma
+
+However, the role of Java varies:
+
+| Component                       | Common Language |
+| ------------------------------- | --------------- |
+| Trading backend services        | Java            |
+| Risk systems                    | Java            |
+| Order Management Systems        | Java            |
+| Market data processing          | Java/C++        |
+| Ultra-low-latency HFT execution | C++             |
+| Research and data science       | Python          |
+
+A typical trading stack might look like:
+
+```text
+Python      -> Research & strategy development
+Java        -> Backend trading platform
+C++         -> Lowest-latency execution components
+Linux       -> Production servers
+```
+
+If your goal is a backend/server-side career and you do not want embedded development, Java is one of the strongest choices. 
+Many trading firms hire Java engineers for distributed systems, market data platforms, risk engines, and order management systems running on Linux servers. 
+Not every trading job is ultra-low-latency C++; there are many Java-based roles as well.
