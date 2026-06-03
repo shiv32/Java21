@@ -1,0 +1,16 @@
+project for algorithmic trading in Java is: Market Data Simulator + Moving Average Strategy
+    What it does
+        Simulates stock prices.
+        Calculates a moving average.
+        Generates BUY/SELL signals.
+    
+Concepts Demonstrated
+    Java classes
+    Collections (Queue)
+    Streaming market data simulation
+    Trading strategy pattern
+    Console-based server-side logic
+
+This is a realistic beginner trading-system PoC because it mimics the core flow used in real platforms:
+
+    Market Data -> Strategy -> Trading Signal

@@ -1,0 +1,108 @@
+How java used in Algorithmic trading platforms?
+
+Java is widely used in algorithmic trading, especially at banks, hedge funds, and exchanges 
+where low latency, reliability, and scalability are important.
+
+Typical areas where Java is used:
+
+### 1. Market Data Processing
+
+Receives and processes millions of price updates from exchanges.
+
+Example:
+
+* Stock prices
+* Futures prices
+* Options prices
+
+Java applications consume market feeds, normalize data, and distribute it to trading systems.
+
+### 2. Trading Strategy Execution
+
+Strategies analyze market data and decide when to buy or sell.
+
+Examples:
+
+* Arbitrage
+* Momentum trading
+* Mean reversion
+* Statistical trading
+
+The strategy engine is often written in Java because it offers good performance and a large ecosystem.
+
+### 3. Order Management Systems (OMS)
+
+Handles:
+
+* New orders
+* Order modifications
+* Order cancellations
+* Trade confirmations
+
+Large financial institutions often build OMS platforms in Java.
+
+### 4. Risk Management
+
+Checks trading limits before orders reach the exchange.
+
+Examples:
+
+* Maximum position size
+* Daily loss limits
+* Margin checks
+
+Java is commonly used because reliability is more important than microsecond-level speed in many risk systems.
+
+### 5. Backtesting Platforms
+
+Tests strategies on historical data.
+
+Java frameworks can process years of market data to evaluate strategy performance.
+
+### 6. Trade Reporting and Analytics
+
+After trades execute:
+
+* P&L calculations
+* Reports
+* Regulatory compliance
+* Performance dashboards
+
+These systems are frequently built in Java.
+
+---
+
+### Where C++ is Preferred
+
+The most latency-sensitive components are often written in C++:
+
+* High-Frequency Trading (HFT)
+* Exchange gateways
+* Ultra-low-latency order execution
+* Network packet processing
+
+Many firms use a hybrid architecture:
+
+```
+Exchange
+    ↑
+C++ Gateway (microseconds)
+    ↑
+Java Trading Platform
+    ↑
+Risk + OMS + Analytics
+```
+
+---
+
+### Companies Known to Use Java in Trading
+
+Examples include:
+
+* JPMorgan Chase
+* Goldman Sachs
+* Morgan Stanley
+* Deutsche Bank
+
+For someone interested in Java backend careers, algorithmic trading is one of the strongest non-embedded domains. 
+Typical skills include Java, multithreading, networking, low-latency programming, Linux, messaging systems, and databases.
