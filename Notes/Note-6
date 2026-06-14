@@ -1,0 +1,33 @@
+What is meaning of Enterprise?
+
+In software, **enterprise** usually means software built for an organization or business rather than for a single individual.
+
+Examples:
+
+* **Personal software:** A simple todo-list app used by one person.
+* **Enterprise software:** A company-wide system used by hundreds or thousands of employees.
+
+Characteristics of enterprise software:
+
+* Many users
+* Database-backed
+* Security and authentication
+* Reliability and scalability
+* Business workflows
+* Integration with other systems
+
+Examples:
+
+* A bank's account management system
+* A hospital's patient management system
+* An HR system for employee records and payroll
+* A CRM system for managing customers
+* An ERP system for managing finance, inventory, and operations
+
+Some well-known enterprise software products are:
+
+* SAP ERP
+* Salesforce
+* Oracle E-Business Suite
+
+So, **enterprise = software that helps an organization run its business processes.** Java is popular in this area because it is reliable, scalable, and has a mature ecosystem for large systems.

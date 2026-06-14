@@ -1,0 +1,33 @@
+So java Enterprise software are web, cloud side not embedded domain right?
+
+Yes, that's correct.
+
+Most Java enterprise software runs on:
+
+* **Web servers** (e.g., Spring Boot applications)
+* **Cloud platforms** (AWS, Azure, Google Cloud)
+* **Application servers**
+* **Data processing clusters**
+* **Backend services and APIs**
+
+Examples:
+
+* Banking systems
+* E-commerce backends
+* Trading platforms
+* ERP systems
+* CRM systems
+* Microservices
+
+Java **can** be used in embedded systems (for example, Java ME and some IoT devices), 
+but this is a much smaller part of the Java ecosystem today.
+
+If your goal is to work with Java, you'll mostly encounter:
+
+* Backend development
+* Web applications
+* Cloud services
+* Enterprise software
+* Android development
+
+You can build a successful Java career without ever working in embedded systems.

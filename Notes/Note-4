@@ -1,0 +1,27 @@
+Java target which type of project give short exmaple.
+
+Java is commonly used for:
+
+| Project Type         | Short Example                                      |
+| -------------------- | -------------------------------------------------- |
+| Web Applications     | Online shopping website                            |
+| Backend APIs         | REST API for a mobile app                          |
+| Enterprise Software  | Banking system                                     |
+| Cloud Services       | Microservice running on Kubernetes                 |
+| Android Apps         | Expense tracker app                                |
+| Big Data             | Processing logs with Apache Hadoop or Apache Spark |
+| Financial Systems    | Trading platform order management                  |
+| Desktop Applications | Simple inventory management tool                   |
+| Developer Tools      | Build tools like Apache Maven                      |
+
+Typical Java projects:
+
+* E-commerce backend
+* Banking application
+* Inventory management system
+* Employee management portal
+* Trading/order management server
+* Cloud microservices
+* Android apps
+
+Java is primarily used for **server-side, enterprise, cloud, web, and Android development**, rather than embedded systems.
