@@ -1,0 +1,9 @@
+What is out?
+
+System.out.println("Hello");
+
+Java interprets it as:
+    Look up the class System.
+    Access its static field out.
+    out is a PrintStream object.
+    Call the println() method on that object.
