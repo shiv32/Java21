@@ -1,0 +1,72 @@
+How java power android?
+
+Java powers Android through the **Android Runtime (ART)**.
+
+### Simplified Android Architecture
+
+            Your Java/Kotlin Code
+                    ↓
+            Android SDK APIs
+                    ↓
+            Java Bytecode (.class)
+                    ↓
+            D8/R8 Compiler
+                    ↓
+            DEX Bytecode (.dex)
+                    ↓
+            ART (Android Runtime)
+                    ↓
+            Linux Kernel
+                    ↓
+            Hardware
+
+### What Happens?
+
+1. You write code in **Java** (or Kotlin).
+2. The Java compiler creates `.class` bytecode.
+3. Android converts it to **DEX (Dalvik Executable)** bytecode.
+4. **ART** executes the DEX code.
+5. ART uses:
+
+   * JIT (Just-In-Time compilation)
+   * AOT (Ahead-Of-Time compilation)
+     to generate native machine code.
+
+### Is Android Running a JVM?
+
+Not exactly.
+
+* Desktop Java:
+
+            Java Code → JVM → OS
+
+* Android:
+
+            Java Code → DEX → ART → Linux
+
+Android does **not** use the standard JVM from Oracle. It uses **ART**, which is optimized for mobile devices.
+
+### Why Java Became Android's Main Language
+
+* Easy to learn
+* Large developer ecosystem
+* Object-oriented
+* Good tooling
+* Huge number of libraries
+
+Today most Android apps are written in **Kotlin**, 
+but Kotlin also compiles to the same Android bytecode and runs on ART just like Java.
+
+So Java doesn't directly control the hardware. Instead:
+
+            Java App
+            ↓
+            Android Framework
+            ↓
+            ART Runtime
+            ↓
+            Linux Kernel
+            ↓
+            Phone Hardware
+
+This is how Java has historically powered Android applications.
