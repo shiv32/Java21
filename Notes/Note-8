@@ -1,0 +1,57 @@
+java application domain list.
+
+Java is used mainly in enterprise, web, cloud, and backend systems rather than embedded systems.
+
+### Java Application Domains
+
+| Domain               | Examples                                               |
+| -------------------- | ------------------------------------------------------ |
+| Web Applications     | E-commerce sites, banking portals                      |
+| Backend Services     | REST APIs, business logic servers                      |
+| Enterprise Software  | ERP, CRM, HRMS systems                                 |
+| Microservices        | Cloud-native distributed applications                  |
+| Cloud Computing      | AWS, Azure, Kubernetes-based services                  |
+| Financial Systems    | Trading platforms, payment processing                  |
+| Banking Applications | Core banking, online banking                           |
+| Big Data             | Apache Hadoop ecosystem                                |
+| Messaging Systems    | Kafka clients, message processing                      |
+| Android Apps         | Android applications (legacy Java, modern Kotlin/Java) |
+| Desktop Applications | Swing, JavaFX applications                             |
+| DevOps Tools         | Jenkins plugins, build systems                         |
+| Telecom Systems      | Billing, network management systems                    |
+| E-commerce Platforms | Order and inventory management                         |
+| Government Systems   | Tax, identity, citizen service portals                 |
+| Healthcare Systems   | Hospital management, medical records                   |
+| Insurance Systems    | Policy and claims processing                           |
+| SaaS Products        | Multi-tenant cloud applications                        |
+
+### Common Enterprise Software Built with Java
+
+* Oracle Database products
+* [Jenkins](https://www.jenkins.io?utm_source=chatgpt.com) CI/CD server
+* [Apache Kafka](https://kafka.apache.org?utm_source=chatgpt.com) Event streaming platform
+* [Apache Hadoop](https://hadoop.apache.org?utm_source=chatgpt.com) Big data platform
+* [Elasticsearch](https://www.elastic.co/elasticsearch?utm_source=chatgpt.com) Search engine
+* [Apache Cassandra](https://cassandra.apache.org?utm_source=chatgpt.com) Distributed database
+
+### Typical Java Developer Roles
+
+* Backend Developer
+* Full-Stack Developer
+* Microservices Developer
+* Cloud Engineer
+* Enterprise Application Developer
+* Big Data Engineer
+* DevOps Engineer
+* Financial Software Engineer
+
+If your goal is **non-embedded software development**, Java is one of the strongest choices because it is widely used for:
+
+1. Backend development
+2. Enterprise software
+3. Cloud applications
+4. Microservices
+5. Banking and fintech systems
+6. SaaS products and web services
+
+These areas generally have far more Java opportunities than embedded development.
