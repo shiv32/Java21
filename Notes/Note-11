@@ -1,0 +1,112 @@
+Rest api and microservices example 
+
+A simple way to understand the difference is that a **REST API** is a way for software to communicate, 
+while **microservices** are a way to organize an application. 
+Microservices often communicate using REST APIs.
+
+## REST API Example
+
+Imagine an online bookstore.
+
+A single backend application exposes these endpoints:
+
+GET    /books
+GET    /books/101
+POST   /books
+PUT    /books/101
+DELETE /books/101
+
+Example:
+
+Request:
+
+GET /books/101
+
+Response:
+{
+  "id": 101,
+  "title": "Effective Java",
+  "price": 750
+}
+
+This is simply a REST API. It doesn't matter whether the application is monolithic or microservices.
+
+---
+
+## Microservices Example
+
+Suppose the same bookstore is split into multiple independent services:
+
+                    Client
+                      |
+                API Gateway
+                      |
+    -----------------------------------
+    |          |          |           |
+Book Service  User Service Order Service Payment Service
+
+Each service has its own REST APIs.
+
+### Book Service
+
+GET /books
+POST /books
+
+### User Service
+
+GET /users/10
+POST /users
+
+### Order Service
+
+POST /orders
+GET /orders/500
+
+### Payment Service
+
+POST /payments
+
+When a customer places an order:
+
+1. Client sends:
+
+   POST /orders
+
+2. Order Service checks book availability by calling Book Service.
+3. Order Service gets user details from User Service.
+4. Order Service requests payment from Payment Service.
+5. Order Service returns the final response to the client.
+
+---
+
+## Spring Boot Example
+
+Each microservice is usually its own separate Spring Boot project.
+
+book-service/
+    src/
+    pom.xml
+
+order-service/
+    src/
+    pom.xml
+
+payment-service/
+    src/
+    pom.xml
+
+user-service/
+    src/
+    pom.xml
+
+Each service:
+
+* Runs independently.
+* Has its own database (commonly).
+* Can be deployed independently.
+* Communicates with other services using REST APIs (or sometimes messaging systems).
+
+### In one sentence
+
+* **REST API** = How applications communicate (HTTP endpoints like `GET /books`).
+* **Microservices** = An architecture where an application is divided into many small services, each often exposing its own REST APIs.
