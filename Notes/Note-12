@@ -1,0 +1,116 @@
+What java developer do in microsoft?
+
+Yes. Microsoft hires Java developers, especially for backend, cloud, distributed systems, and enterprise platforms. 
+Even though Microsoft is famous for C# and .NET, Java is widely used by customers on Microsoft Azure. 
+Microsoft therefore builds tools, services, and cloud infrastructure that support Java applications.
+
+### What a Java developer at Microsoft typically does
+
+* Build backend services — REST APIs, microservices, authentication systems, payment systems, etc.
+
+* Work on cloud platforms — deploy and manage Java applications on Microsoft Azure.
+
+* Develop distributed systems — scalable services that run across many servers.
+
+* Optimize performance — memory usage, GC tuning, latency reduction.
+
+* Use DevOps tools — Docker, Kubernetes, CI/CD pipelines.
+
+* Write automated tests — unit, integration, and load tests.
+
+* Collaborate with other teams — product managers, QA engineers, SREs, and frontend developers.
+
+### Common technologies they use
+
+| Area        | Technologies                       |
+| ----------- | ---------------------------------- |
+| Language    | Java 17/21                         |
+| Frameworks  | Spring Boot, Spring Cloud          |
+| Databases   | PostgreSQL, MySQL, Cosmos DB       |
+| Cloud       | Azure                              |
+| Containers  | Docker, Kubernetes                 |
+| Messaging   | Kafka, RabbitMQ, Azure Service Bus |
+| Build Tools | Maven, Gradle                      |
+| CI/CD       | GitHub Actions, Azure DevOps       |
+
+### A real-world example
+
+Suppose Microsoft has a cloud service that stores telemetry from millions of devices.
+
+A Java developer may:
+
+* Create a Spring Boot API to receive telemetry data.
+
+* Push messages to Kafka.
+
+* Store data in Cosmos DB.
+
+* Deploy the service on Azure Kubernetes Service (AKS).
+
+* Monitor performance and fix production issues.
+
+### What skills Microsoft usually expects
+
+* Strong Core Java (OOP, collections, streams, concurrency).
+
+* Data structures & algorithms.
+
+* Spring Boot and REST APIs.
+
+* SQL and database design.
+
+* Microservices architecture.
+
+* Docker and Kubernetes.
+
+* Git and CI/CD.
+
+* Cloud concepts (Azure preferred).
+
+### For someone with background (C++ + interest in Java backend)
+
+You already know:
+
+* OOP
+
+* Design patterns
+
+* CMake / project structure
+
+* System-level thinking
+
+To become eligible for Java backend roles, focus on:
+
+* Core Java
+
+* Spring Boot
+
+* REST APIs
+
+* JPA/Hibernate
+
+* PostgreSQL/MySQL
+
+* Docker
+
+* Kubernetes basics
+
+* Azure fundamentals
+
+### Simple roadmap (3–6 months)
+
+* Month 1: Core Java + Collections + Streams
+
+* Month 2: Spring Boot + REST API
+
+* Month 3: Database + JPA/Hibernate
+
+* Month 4: Docker + GitHub Actions
+
+* Month 5: Microservices + Kafka basics
+
+* Month 6: Deploy on Azure
+
+So, a Java developer at Microsoft is not writing Windows desktop apps. 
+Most of the work is backend services, cloud systems, APIs, and scalable enterprise software running on Azure. 
+C++ experience can actually help you stand out because you already understand memory, performance, and software architecture better than many pure Java beginners.
