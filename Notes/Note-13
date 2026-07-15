@@ -1,0 +1,64 @@
+Embedded vs web development skill list.
+
+Here's a comparison of the core skills for **Embedded Development** and **Web Development**.
+
+| Skill              | Embedded Development                    | Web Development                                   |
+| ------------------ | --------------------------------------- | ------------------------------------------------- |
+| Primary Languages  | C, C++, Rust                            | Java, C#, Python, JavaScript, TypeScript, Go, PHP |
+| Operating Systems  | Bare Metal, RTOS, Embedded Linux        | Linux, Windows, Cloud Linux                       |
+| Memory Management  | Very important                          | Moderate (depends on language)                    |
+| Hardware Knowledge | ⭐⭐⭐⭐⭐ Essential                         | ⭐ Minimal                                         |
+| Networking         | TCP/IP, CAN, UART, SPI, I2C             | HTTP, HTTPS, WebSocket, REST, gRPC                |
+| Multithreading     | RTOS tasks, interrupts                  | Threads, async programming                        |
+| Debugging          | JTAG, GDB, Logic Analyzer, Oscilloscope | IDE debugger, logs, profilers                     |
+| Databases          | Rare                                    | PostgreSQL, MySQL, MongoDB, Redis                 |
+| Cloud              | Optional                                | AWS, Azure, GCP                                   |
+| Containers         | Rare                                    | Docker, Kubernetes                                |
+| APIs               | Device drivers, HAL                     | REST, GraphQL, gRPC                               |
+| Security           | Secure Boot, Firmware Signing           | OAuth, JWT, TLS, Authentication                   |
+| CI/CD              | Firmware pipelines                      | GitHub Actions, Jenkins, GitLab CI                |
+| Testing            | Hardware-in-the-loop, Unit Tests        | Unit, Integration, E2E, Load Testing              |
+| Version Control    | Git                                     | Git                                               |
+| Build Systems      | CMake, Make, Bazel                      | Maven, Gradle, npm, pip                           |
+
+### Embedded Development Roadmap
+
+* C/C++
+* Data Structures & Algorithms
+* Computer Organization
+* Microcontrollers (STM32, AVR, ESP32)
+* Digital Electronics
+* UART, SPI, I2C, CAN
+* RTOS (FreeRTOS, Zephyr)
+* Embedded Linux
+* Device Drivers
+* Networking (TCP/IP)
+* Debugging with GDB/JTAG
+* CMake, Make
+* Git
+
+### Web Development (Backend) Roadmap
+
+* Java / C# / Python / Go / Node.js
+* Data Structures & Algorithms
+* OOP & Design Patterns
+* SQL (PostgreSQL/MySQL)
+* REST APIs
+* Authentication (JWT, OAuth)
+* Redis
+* Message Queues (Kafka, RabbitMQ)
+* Docker
+* Kubernetes
+* AWS/Azure/GCP
+* CI/CD
+* Monitoring (Prometheus, Grafana)
+* System Design
+* Git
+
+### Which is harder?
+
+* **Embedded:** Harder at the low level because you need to understand hardware, memory, timing, interrupts, and electronics.
+* **Web:** Broader ecosystem with many frameworks and tools, but generally less hardware complexity.
+
+If you **don't want to work in embedded systems** and are interested in **Java backend/cloud development**,
+focusing on the web backend skill set (Java + Spring Boot + PostgreSQL + Docker + AWS + System Design) aligns better with your career goals.
