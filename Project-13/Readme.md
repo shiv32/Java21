@@ -1,0 +1,1 @@
+java class and getter setter example

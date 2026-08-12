@@ -1,5 +1,15 @@
 # Java21
 
+In IntelliJ IDEA, the keyboard shortcut 
+
+    to format/reformat Java code is:
+        Windows/Linux: Ctrl + Alt + L
+        macOS: ⌥ Option + ⌘ Command + L
+
+Java online compiler
+
+    https://www.onlinegdb.com/online_java_compiler
+
 create a new repository on the command line  
 
     echo "# Java21" >> README.md
