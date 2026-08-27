@@ -1,0 +1,44 @@
+For **REST APIs**, the most-used programming languages are roughly:
+
+| Rank | Language                    | REST API usage | Common frameworks               |
+| ---- | --------------------------- | -------------- | ------------------------------- |
+| 🥇   | **Java**                    | Very high      | Spring Boot, Spring MVC         |
+| 🥈   | **JavaScript / TypeScript** | Very high      | Node.js, Express, NestJS        |
+| 🥉   | **Python**                  | Very high      | FastAPI, Django, Flask          |
+| 4    | **C#**                      | Very high      | ASP.NET Core                    |
+| 5    | **Go**                      | High           | Gin, Echo, Fiber                |
+| 6    | **PHP**                     | High           | Laravel, Symfony                |
+| 7    | **C++**                     | Moderate       | Drogon, POCO, Crow, Boost.Beast |
+| 8    | **Rust**                    | Growing        | Axum, Actix Web                 |
+
+### For industry jobs
+
+If your goal is **general backend REST API development**:
+
+**Java + Spring Boot** → probably the strongest choice for enterprise jobs.
+
+If you want **modern web/backend**:
+
+**TypeScript + Node.js/NestJS**
+
+If you want **C++ backend/infrastructure**:
+
+**C++ + POCO/Drogon + Nginx + Redis**
+
+**C++ and POCO**, is quite reasonable for specialized backend/infrastructure systems.
+C++ isn't the most common language for REST APIs, but it's used where **performance,
+low latency, networking, or existing C++ systems** matter.
+
+A useful way to think about it:
+
+**Typical business API**
+→ Java/Spring Boot
+
+**Web/Startup API**
+→ Node.js/TypeScript
+
+**AI/Data API**
+→ Python/FastAPI
+
+**High-performance infrastructure API**
+→ C++/Go/Rust
