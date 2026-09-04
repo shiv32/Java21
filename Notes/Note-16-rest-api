@@ -1,0 +1,86 @@
+Do java spring boot use http in code and https at gateway?
+
+Yes. **Spring Boot can use exactly the same architecture.**
+
+The common production setup is:
+
+```text
+Client
+   │
+   │ HTTPS :443
+   ▼
+Nginx / API Gateway
+   │
+   │ HTTP :8080
+   ▼
+Spring Boot REST API
+```
+
+### In Spring Boot code
+
+You simply write a normal HTTP REST API:
+
+```java
+@RestController
+@RequestMapping("/api")
+public class HelloController {
+
+    @GetMapping("/hello")
+    public String hello() {
+        return "Hello from Spring Boot";
+    }
+}
+```
+
+Spring Boot runs on something like:
+
+```text
+http://localhost:8080/api/hello
+```
+
+Nginx handles HTTPS:
+
+```text
+https://example.com/api/hello
+        │
+        ▼
+      Nginx
+        │
+        ▼
+http://localhost:8080/api/hello
+```
+
+This is often called **TLS/SSL termination at the reverse proxy**.
+
+### But Spring Boot can also do HTTPS itself
+
+Just like POCO:
+
+```text
+Client
+   │ HTTPS
+   ▼
+Spring Boot :8443
+```
+
+You configure an SSL certificate/keystore in `application.properties`, for example:
+
+```properties
+server.port=8443
+server.ssl.enabled=true
+server.ssl.key-store=classpath:server.p12
+server.ssl.key-store-password=password
+server.ssl.key-store-type=PKCS12
+```
+
+So the important distinction is:
+
+| Setup                    | API code | TLS         |
+| ------------------------ | -------- | ----------- |
+| Nginx + Spring Boot      | HTTP     | Nginx       |
+| Nginx + POCO             | HTTP     | Nginx       |
+| Direct Spring Boot HTTPS | HTTP API | Spring Boot |
+| Direct POCO HTTPS        | HTTP API | POCO        |
+
+For the **POCO + Nginx architecture you're learning**,
+the equivalent **Spring Boot + Nginx architecture is almost identical**.
