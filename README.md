@@ -1,5 +1,9 @@
 # Java21
 
+[SOLID Principles](https://www.geeksforgeeks.org/system-design/solid-principle-in-programming-understand-with-real-life-examples/)
+[Design pattern](https://refactoring.guru/design-patterns/java)
+[Design pattern](https://sourcemaking.com/design_patterns)
+
 In IntelliJ IDEA, the keyboard shortcut 
 
     to format/reformat Java code is:
