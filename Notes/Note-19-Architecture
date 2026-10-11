@@ -1,0 +1,132 @@
+Give architecture for core java project,logic use in console framework etc.
+
+The best approach is to build a framework-independent Core Java module and
+reuse it through different application layers: console, desktop GUI, REST API, or other Java frameworks.
+
+This architecture is often called Layered Architecture or,
+with stronger separation of business rules from infrastructure, Clean Architecture.
+
+## 1. Overall architecture
+
+### Presentation / Application Entry Points
+
+Console
+Main.java
+
+REST API
+Spring Boot
+
+Desktop GUI
+Swing / JavaFX
+
+Other clients
+Future adapters
+
+## Application / Service Layer
+`BankService`, `AccountService`
+Coordinates use cases and business operations
+
+## Core Domain — Vanilla Java
+`BankAccount`, `Money`, `BusinessRules`
+Business logic, validation, calculations and domain models
+No framework dependency
+
+### Infrastructure / Data Layer
+`AccountRepository`, JDBC, files, database
+Storage and external integrations
+
+The important principle is that your business logic should not depend on the console UI or Spring Boot.
+Each entry point invokes the same core functionality.
+
+## 2. Recommended project folder structure
+
+For a banking application:
+
+```
+BankingSystem/
+│
+├── core/
+│   └── src/main/java/com/app/core/
+│       ├── domain/
+│       │   ├── BankAccount.java
+│       │   └── Transaction.java
+│       ├── service/
+│       │   └── BankService.java
+│       ├── repository/
+│       │   └── AccountRepository.java
+│       └── validation/
+│           └── AccountValidator.java
+│
+├── console-app/
+│   └── src/main/java/com/app/console/
+│       └── Main.java
+│
+├── spring-api/
+│   └── src/main/java/com/app/api/
+│       └── BankController.java
+│
+├── desktop-app/
+│   └── src/main/java/com/app/desktop/
+│       └── BankWindow.java
+│
+└── pom.xml
+```
+
+- core: reusable Java logic, with no dependency on UI frameworks.
+- console-app: menu, input and output.
+- spring-api: HTTP endpoints and request/response handling.
+- desktop-app: graphical user interface.
+- repository: an abstraction for storing and retrieving accounts.
+
+You can start with just `core` and `console-app`. Add the other modules when you need them.
+
+## 3. How a single operation flows
+
+For example, when a user deposits ₹500:
+
+Console or REST controller
+
+Receives the amount: ₹500
+
+BankService
+
+Finds the account and coordinates the deposit
+
+BankAccount
+
+Validates the amount and updates the balance
+
+Repository
+
+Persists the updated account when storage is configured
+
+Both console and REST API clients follow the same business rules. Only the way users interact with the application changes.
+
+## 4. Dependency rules
+
+| Component               | Can depend on                                |
+| ----------------------- | -------------------------------------------- |
+| Console UI              | Core services                                |
+| Spring Boot controller  | Core services                                |
+| Desktop UI              | Core services                                |
+| Service layer           | Domain classes and repository interfaces     |
+| Domain layer            | Plain Java types and other domain classes    |
+| Database implementation | Repository interfaces and database libraries |
+
+Avoid: putting `System.out.println()`, `Scanner`, `@RestController`, or Spring-specific annotations inside your domain classes. Keep input/output and framework code at the edges.
+
+## 5. How to build it progressively
+
+1. Phase 1 — Vanilla Java: Build the domain classes and service layer; run them from a console application.
+2. Phase 2 — Persistence: Introduce a repository interface and implement it using file storage or JDBC.
+3. Phase 3 — REST API: Create a Spring Boot module that depends on the core module.
+4. Phase 4 — Testing: Test business logic independently using JUnit or plain Java tests.
+5. Phase 5 — Reuse: Package the core module as a JAR and reuse it in other compatible Java applications.
+
+One important detail: console, desktop, and REST interfaces can reuse the same core logic,
+but they don't necessarily share the same running application or memory.
+If they run as separate processes, shared account data needs persistent storage or a server.
+
+My recommendation:
+use a multi-module Maven project with a plain Java `core` module and a `console-app` module first.
+This keeps the architecture simple while making it straightforward to add Spring Boot later.
