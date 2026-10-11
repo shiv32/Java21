@@ -1,0 +1,119 @@
+I know only vanilla java, What can i make using it?
+
+If you know only vanilla Java (Core Java), you can already build many useful applications without Spring Boot, external frameworks, or third-party libraries.
+
+Since your goal is to build practical projects and get a job, focus on applications that demonstrate Java fundamentals, OOP, collections, file handling, and database or networking concepts as you progress.
+
+## 1. What can you build using vanilla Java?
+
+1. Console applications
+
+Start here
+
+- Banking management system
+- Student or employee management
+- Inventory and billing system
+- Library management system
+- ATM simulator
+
+Concepts: OOP, collections, exception handling, file I/O.
+
+2. Desktop applications
+
+- Expense tracker
+- Personal finance manager
+- Employee record manager
+- Text editor
+- File search utility
+
+Use Java Swing, which is included in the JDK's desktop modules.
+
+3. Networking applications
+
+- Client-server chat application
+- TCP messaging server
+- Multi-client chat room
+- File transfer over a network
+- Simple HTTP client
+
+Concepts: sockets, threads, streams, HTTP, concurrency.
+
+4. Backend and server applications
+
+- HTTP server using Java's built-in APIs
+- JSON-based REST-like endpoints
+- URL monitoring service
+- Log processing service
+- Background job scheduler
+
+Concepts: Java HTTP Server API, concurrency, JDBC, HTTP and JSON handling.
+
+## 2. What can vanilla Java do without frameworks?
+
+| Application type           | Possible with vanilla Java? | Important detail                                                         |
+| -------------------------- | --------------------------- | ------------------------------------------------------------------------ |
+| Console software           | Yes                         | No external libraries needed                                             |
+| File-based applications    | Yes                         | Built-in file APIs                                                       |
+| Desktop GUI                | Yes                         | Swing                                                                    |
+| Multithreaded applications | Yes                         | Threads, executors                                                       |
+| TCP client/server          | Yes                         | Socket APIs                                                              |
+| HTTP client                | Yes                         | `java.net.http.HttpClient`                                               |
+| HTTP server                | Yes                         | `com.sun.net.httpserver.HttpServer` in the JDK's `jdk.httpserver` module |
+| Database applications      | Yes                         | JDBC plus a database-specific driver                                     |
+| Production REST backend    | Possible                    | More manual work without a framework                                     |
+| Android applications       | Not by itself               | Android SDK and platform tooling are needed                              |
+| Modern web applications    | Not by itself               | Usually need a web framework and frontend technologies                   |
+
+## 3. Five projects I recommend building
+
+Project 1 — Banking system
+
+Accounts, deposits, withdrawals, transfers and transaction history.
+
+Skills: classes, interfaces, collections, validation.
+
+Project 2 — Employee management
+
+Add, update, search, delete and save employee records.
+
+Skills: collections, file persistence, exceptions.
+
+Project 3 — Client-server chat
+
+Connect multiple clients to a server and exchange messages.
+
+Skills: sockets, threads, synchronization.
+
+Project 4 — Mini HTTP server
+
+Handle requests such as GET /hello and return responses.
+
+Skills: HTTP, request handling, server-side logic.
+
+Project 5 — Database-backed inventory system
+
+Store products, update stock, search items and generate reports.
+
+Skills: JDBC, SQL, transactions and data modelling.
+
+## 4. Can you get a Java job with only vanilla Java?
+
+Vanilla Java is the foundation, but most professional Java backend jobs require more.
+
+A practical path is:
+
+1. Core Java: OOP, collections, generics, exceptions, streams, concurrency.
+2. SQL and JDBC: learn how Java communicates with a database.
+3. HTTP and REST APIs: understand requests, responses, status codes and JSON.
+4. Spring Boot: learn dependency injection, REST controllers and database integration.
+5. Tools: Maven, Git, JUnit and basic Docker.
+
+Since you want a career in web/backend development,
+I would build a console banking system first, then a database-backed application,
+and finally a REST API. This gives you a progression from pure Java to employable backend skills.
+
+One important distinction:
+you do not need Spring Boot to start learning backend development.
+You can build a small HTTP server in vanilla Java first,
+then learn Spring Boot when you understand what the framework simplifies.
+
