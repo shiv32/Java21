@@ -15,7 +15,7 @@ In IntelliJ IDEA, the keyboard shortcut
 
 Java online compiler
 
-    https://www.onlinegdb.com/online_java_compiler
+    [Java online compiler](https://www.onlinegdb.com/online_java_compiler)
 
 create a new repository on the command line  
 
