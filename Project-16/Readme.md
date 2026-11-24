@@ -5,9 +5,13 @@ public static void main(String[] args) {
 }
 
 String[] – Array of strings.
+
 args – Variable name (you can choose another name).
+
 args[0] – First command-line argument.
 
 Compile & run
+
     javac Main.java
+
     java Main Shiv 25
